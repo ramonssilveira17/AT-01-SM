@@ -1,30 +1,16 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import {Routes} from './src/routes/routes'
 Icon.loadFont()
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={styles.itenscoluna}>
-        <Icon name="person" size={40}></Icon>
-        <Text>Perfil</Text>
-      </View>
-
-      <View style={styles.itenscoluna}>
-        <Icon name="camera-alt" size={40}></Icon>
-        <Text>Câmera</Text>
-      </View>
-
-      <View style={styles.itenscoluna}>
-        <Icon name="exit-to-app" size={40}></Icon>
-        <Text>Sair</Text>
-      </View>
-    </View>
+    <Routes/>
   );
 }
 
-const styles = StyleSheet.create({
+  const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#bdbdbd',
@@ -49,4 +35,4 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     elevation: 15,
   },
-});
+}); 
